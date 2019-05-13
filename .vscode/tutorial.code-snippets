@@ -1,0 +1,54 @@
+{
+  "nav": {
+    "prefix": "nav",
+    "body": [
+      "<nav>",
+      "  <a href=\"/\">Todos</a>",
+      "  <a href=\"/stats\">Stats</a>",
+      "</nav>"
+    ]
+  },
+  "routes": {
+    "prefix": "routes",
+    "body": [
+      "[",
+      "  {",
+      "    path: '/',",
+      "    component: 'todo-view'",
+      "  },",
+      "  {",
+      "    path: '/stats',",
+      "    component: 'stats-view',",
+      "    action: () =>",
+      "      import(/* webpackChunkName: \"stats\" */ './views/stats-view')",
+      "  },",
+      "  {",
+      "    path: '(.*)',",
+      "    component: 'not-found-view',",
+      "    action: () =>",
+      "      import(/* webpackChunkName: \"not-found-view\" */ './views/not-found-view')",
+      "  }",
+      "]"
+    ]
+  },
+  "imports": {
+    "prefix": "imports",
+    "body": [
+      "import { LitElement, html } from '@polymer/lit-element';",
+      "import { connect } from 'pwa-helpers';",
+      "import { store } from '../redux/store.js';",
+      "import { statsSelector } from '../redux/reducer.js';",
+      "import '@vaadin/vaadin-charts';"
+    ]
+  },
+  "chart": {
+    "prefix": "chart",
+    "body": [
+      "<vaadin-chart type=\"pie\">",
+      "  <vaadin-chart-series",
+      "    .values=\"${this.chartConfig}\">",
+      "  </vaadin-chart-series>",
+      "</vaadin-chart>"
+    ]
+  }
+}
