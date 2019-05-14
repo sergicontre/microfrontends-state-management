@@ -36,7 +36,7 @@ class ViewB extends LitElement {
     const toggle = this.shadowRoot.getElementById('toggle');
     
     slider.addEventListener('change', () => {
-      prog.value =  slider.value * 100 / 100;
+      prog.value =  slider.value;
     });
 
     toggle.addEventListener('change', () => {

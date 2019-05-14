@@ -20,7 +20,7 @@ class ViewC extends LitElement {
       <!-- template content -->
       <wired-card elevation="5">
         <h4>Micro Frontend 3</h4>
-        <wired-checkbox id="cbox">Off All</wired-checkbox>
+        <wired-checkbox id="cbox">Off all</wired-checkbox>
         <section>
             <wired-spinner id="sp"></wired-spinner>
         </section>
