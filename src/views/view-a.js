@@ -33,7 +33,7 @@ class ViewA extends LitElement {
             <wired-item value="three">50</wired-item>
             <wired-item value="four">75</wired-item>
           </wired-listbox>
-          <wired-icon-button id="iconBtn" class="red" disabled>favorite</wired-icon-button>
+          <wired-icon-button id="iconBtn" class="red" disabled>cached</wired-icon-button>
         </section>
       </wired-card>
     `;
@@ -54,9 +54,19 @@ class ViewA extends LitElement {
       PubSub.publish('value-channel',inputValue.value);
     });
 
+    iconBtn.addEventListener('click', () => {
+      //Publish to channel
+      PubSub.publish('spinner-channel',inputValue.value);
+    });
+
     //Subscribe to channel
     PubSub.subscribe('favorite-channel').on((value) => {
       iconBtn.disabled = !value  
+    });
+
+    //Subscribe to channel
+    PubSub.subscribe('broadcast-channel').on((value) => {
+      iconBtn.disabled = value  
     });
 
   }

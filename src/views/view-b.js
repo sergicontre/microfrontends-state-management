@@ -46,7 +46,13 @@ class ViewB extends LitElement {
 
     //Subscribe to channel
     PubSub.subscribe('value-channel').on((value) => {
-      prog.value = value  
+      prog.value = value ; 
+    });
+
+    //Subscribe to channel
+    PubSub.subscribe('broadcast-channel').on((value) => {
+      slider.disabled = value; 
+      toggle.disabled = value;
     });
 
   }

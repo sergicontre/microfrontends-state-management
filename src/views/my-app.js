@@ -1,6 +1,7 @@
 import { LitElement, html } from 'lit-element';
 import './view-a';
 import './view-b';
+import './view-c';
 
 // Extend the LitElement base class
 class MyApp extends LitElement {
@@ -9,6 +10,7 @@ class MyApp extends LitElement {
       <!-- template content -->
       <view-a></view-a>
       <view-b></view-b>
+      <view-c></view-c>
     `;
   }
 }
