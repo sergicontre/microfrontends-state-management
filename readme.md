@@ -1,4 +1,4 @@
-# Micro Fronetends state management example
+# Micro Frontends state management example
 
 This is an example project to show how to manage data/state with Web Components using Micro Frontends techniques.
 
