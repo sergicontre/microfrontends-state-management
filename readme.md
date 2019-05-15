@@ -15,7 +15,7 @@ a module bundler.
 
 ## State Management Patterns
 
-- 👨‍👦‍👦 Use Mediator Pattern to manage state in Micro Frontend scope.
+- 👨‍👦‍👦 Use Mediator pattern to manage state in Micro Frontend scope.
 - 🎛 Use Pub/Sub pattern to manage state in Global scope to share state between Micro Frontends.
 - Use ⬆️events up and ⬇️ properties/attributes down in Web Components scope.
 
