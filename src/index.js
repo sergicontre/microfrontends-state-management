@@ -37,7 +37,7 @@ function initRouter() {
     {
       path: '/view-bc',
       component: 'view-bc',
-      action: () => import(/* webpackChunkName: "viewbc */ './views/view-bc')
+      action: () => import(/* webpackChunkName: "viewbc" */ './views/view-bc')
     },
     {
       path: '/view-ac',
